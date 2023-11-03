@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-image: url("animalfeed.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 290%; */
+          
+
+
+        }
+
+        @font-face {
+            font-family: hindi;
+            src: url(/KRDEV010.TTF);
+        }
+
+        .font h1 {
+            font-family: hindi;
+
+
+
+        }
+
+        .nav {
+            display: flex;
+            padding-left: 20px;
+            background-color: rgb(123, 164, 164);
+            opacity: 0.9;
+            align-items: center;
+            align-items: center;
+
+
+        }
+
+        .nav h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .nav img {
+            width: 100px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+
+
+        .imge {
+            padding: 80px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYO__A8AcEvnaAyqPl2FLFbE0SHb16OV7Rhg&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.7;
+            color: white;
+
+        }
+
+        #cattletype {
+            text-align: center;
+            align-items: center;
+        }
+
+        .btn btn-primary {
+            color: brown;
+        }
+        form{
+            text-align: center;
+           
+            background-color: rgb(175, 180, 185);
+            padding: 50px;
+            margin: 20px;
+            box-shadow: 5px 5px 10px grey;
+        }
+        .container-fluid{
+             /* background-image: linear-gradient(to left,rgb(233, 224, 224),rgb(194, 191, 191)); */
+        }
+        .footer{
+            text-align: center;
+        }
+        .marq{
+            text-align: center;
+        }
+        .footerimge{
+            padding-top: 30px;
+            padding-left: 90px;
+        }
+        .footerimge2{
+            /* padding-left: 60px; */
+           
+        }
+        .footerimge2 img{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="nav">
+                <div class="col-sm-6">
+
+                    <img src="data:image/png;base64,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"
+                        alt="">
+
+                </div>
+                <div class="col-sm-6">
+
+                    <h5>BAM BHOLE ENTERPRISES</h5>
+                    <p>Industrial Aria , Palsana <br>BABLU SING YADAV</p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="imge">
+            <div class="row">
+                <div class="col">
+                    <h1>CATTLE FEED</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="cattletype">Which Type Of Cattle Feed You Use</div>
+        </div>
+        <!-- <div class="container-fluid"> -->
+        <div class="row">
+            <div class="col">
+                <img src="https://media.istockphoto.com/id/1306859909/photo/feed-for-livestock-pig-feed-pellets-feed-for-hamster-rabbits-or-mouse-on-a-white-background.jpg?s=612x612&w=0&k=20&c=dlTbkyzL31g9HuIWZUeP90k2KyTJqxZve7N34rwu94E="
+                    alt="" width="300px">
+                <button class="btn btn-primary" type="submit">slect the feed</button>
+            </div>
+            <div class="col">
+                <img src="https://media.istockphoto.com/id/912867346/photo/pelleted-compound-feed-isolated-on-white-background-wheatfeed-pellets.jpg?s=612x612&w=0&k=20&c=IKpXcWCjSn9ObsSd51v2e8-sUI8FXlO0W68xbF73AjI="
+                    alt="" width="300px">
+                <button class="btn btn-primary" type="submit">slect the feed</button>
+            </div>
+            <div class="col">
+                <img src="https://media.istockphoto.com/id/816005052/photo/pile-of-granulated-animal-feeds-on-white-background.jpg?s=612x612&w=0&k=20&c=yPNHQ7kaIkUEIb1yF3ZJgdpnq-gUkQ3cqu8LGy4vWec="
+                    alt="" width="300px">
+                <button class="btn btn-primary" type="submit">slect the feed</button>
+            </div>
+            <div class="col ">
+                <img src="https://media.istockphoto.com/id/917185426/photo/pelleted-compound-feed-isolated-on-white-background-wheatfeed-pellets.jpg?s=612x612&w=0&k=20&c=jljf_H_MWU8tdMO7qMgDO0ejs_EixZp-0dejUsiJDjw="
+                    alt="" width="300px">
+                <button class="btn btn-primary" type="submit">slect the feed</button>
+            </div>
+        </div>
+        <!-- </div> -->
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Phone-No.</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Address</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          
+    </div>
+<div class="footer">
+    <h5>Mr.Bablu yadav</h5>
+    <p>Contact No. 9928907671</p>
+</div>
+<div class="marq">
+    <h6><marquee behavior="" direction="">for more information click on the below link</marquee></h6>
+    <link rel="stylesheet" href="">
+    <a href="https://www.instagram.com/the_strong_eagle9/?hl=en">click here</a>
+</div>
+<div class="footerimge">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7AJAyxP2v3szQ9xpEZLnguzRuaRwLwYo9vw&usqp=CAU" class="img-fluid" alt="...">
+</div>
+<div class="footerimge2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJoDx_Edl_xsc51aTpc9OUsvE7xmydQLpa6w&usqp=CAU" class="img-fluid" alt="...">
+</div>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</body>
+
+</html>
